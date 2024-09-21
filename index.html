@@ -80,10 +80,13 @@
 </body>
 <style>
     .dropdown {
-        position: fixed;
-        top: 20px; /* Adjusted from 0 to 20px to move it slightly down */
-        right: 20px; /* Adjusted from 0 to 20px to move it slightly left */
+        position: absolute;
+        top: 40px;  /* Move it down slightly */
+        right: 40px;  /* Move it slightly inward from the right */
         padding: 10px;
+        background-color: white;  /* Ensures it is clearly visible */
+        border: 1px solid #ccc;  /* Optional: gives a subtle border */
+        z-index: 10;  /* Makes sure it's on top */
     }
 
     .dropdown-content {
