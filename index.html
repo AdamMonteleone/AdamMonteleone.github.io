@@ -81,8 +81,8 @@
 <style>
     .dropdown {
         position: fixed;
-        top: 0;
-        right: 0;
+        top: 20px; /* Adjusted from 0 to 20px to move it slightly down */
+        right: 20px; /* Adjusted from 0 to 20px to move it slightly left */
         padding: 10px;
     }
 
@@ -102,14 +102,7 @@
         display: block;
     }
 
-    .dropdown-content a:hover {background-color: #f1f1f1}
+    .dropdown-content a:hover {background-color: #f1f1f1;}
     .dropdown:hover .dropdown-content {display: block;}
 </style>
-
-<div class="dropdown">
-    <span>Seminars</span>
-    <div class="dropdown-content">
-        <a href="bridgeland_stability.html">Bridgeland Stability</a>
-    </div>
-</div>
 </html>
