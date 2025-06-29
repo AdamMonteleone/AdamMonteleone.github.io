@@ -5,17 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Browser‑tab / Google result title -->
+  <!-- Browser-tab / Google result title -->
   <title>Adam Monteleone</title>
   <meta property="og:title" content="Adam Monteleone – Algebraic & Arithmetic Geometry">
-  <!-- Two‑line grey snippet in Google results -->
+
+  <!-- Two-line grey snippet in Google results -->
   <meta name="description"
         content="Homepage of Adam Monteleone, PhD candidate in algebraic and arithmetic geometry at the University of Melbourne. Research interests include derived categories, representation theory and number theory.">
 
   <!-- Canonical URL — leave as github.io unless/until you add a custom domain -->
   <link rel="canonical" href="https://adammonteleone.github.io/">
 
-  <!-- ———— SEARCH‑ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
+  <!-- ———— SEARCH-ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +46,7 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    /* 100 % of your current CSS — plus small additions for the corner GIFs */
+    /* ———— EXISTING STYLES ———— */
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -53,81 +54,115 @@
       margin: 0;
       padding: 20px;
     }
-    h1 { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
-    p  { margin: 5px 0; }
-    a  { color: #007bff; text-decoration: none; }
+    h1   { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+    p    { margin: 5px 0; }
+    a    { color: #007bff; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    ul { padding-left: 20px; }
-    h2 { margin-top: 20px; font-size: 22px; }
+    ul   { padding-left: 20px; }
+    h2   { margin-top: 20px; font-size: 22px; }
 
-    /* ———— Corner GIFs ———— */
-    .corner-gifs {
+    /* ———— NEW FOR CORNER ANIMATIONS ———— */
+    .corner-box{
       position: fixed;
       top: 10px;
       right: 10px;
       display: flex;
-      gap: 10px;
-      z-index: 999;           /* above everything */
-      pointer-events: none;   /* allow clicks on links underneath */
+      gap: 10px;      /* spacing between the two animations */
+      z-index: 1000;
+      pointer-events: none;  /* ensures underlying links remain clickable */
     }
-    .corner-gifs img {
-      width: 150px;           /* resize here */
+    .corner-box img{
+      width: 200px;   /* make both slightly larger */
       height: auto;
-    }
-    @media (max-width: 700px) {
-      .corner-gifs img { width: 90px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- ———— TOP‑RIGHT ANIMATIONS ———— -->
-  <div class="corner-gifs">
-    <!-- Calabi–Yau 3‑fold (rename/path exactly as uploaded) -->
-    <img src="assets/CY3.gif" alt="Calabi–Yau 3‑fold animation">
-    <!-- 27 lines on a cubic surface -->
-    <img src="assets/img/27-lines-cropped.gif" alt="27 lines on cubic surface animation">
-  </div>
 
-  <!-- ———— PAGE CONTENT ———— -->
-  <h1>Adam Monteleone</h1>
+<!-- ———— FIXED TOP-RIGHT ANIMATIONS ———— -->
+<div class="corner-box">
+  <!-- 27 lines on cubic surface (left) -->
+  <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
+       alt="27 lines on cubic surface animation"
+       loading="lazy">
 
-  <p>PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.</p>
-  <p>My advisor is <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a>, I am part of the <a href="https://algebraicgeometry.science.unimelb.edu.au/#tabmain" style="color: blue;">Algebraic Geometry Group</a>.</p>
-  <p><strong>Email:</strong> monteleonea at student dot unimelb dot edu dot au</p>
-  <p><strong>Interests:</strong> Algebraic Geometry, Arithmetic Geometry, Representation Theory</p>
-  <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Adam_Monteleone">Adam Monteleone</a></p>
+  <!-- Calabi–Yau 3-fold (right) -->
+  <img src="assets/CY3.gif"
+       alt="Calabi–Yau 3-fold animation"
+       loading="lazy">
+</div>
 
-  <h2>Publications:</h2>
-  <ul>
-    <li>Local Tail Statistics of Heavy-Tailed Random Matrix Ensembles with Unitary Invariance (with Mario Kieburg) – <a href="https://arxiv.org/pdf/2103.00817">arXiv</a><br><em>Journal of Physics A: Mathematical and Theoretical 54 (2021), no. 32, 324002. <a href="https://iopscience.iop.org/issue/1751-8121/54/32">Journal Link</a></em></li>
-  </ul>
+<!-- ———— MAIN PAGE CONTENT ———— -->
+<h1>Adam Monteleone</h1>
 
-  <h2>MSc Thesis:</h2>
-  <ul>
-    <li><strong>Homological Projective Duality</strong>, July 2024 – supervised by <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a> and <a href="https://sites.google.com/view/dougal-davis/home?authuser=0" style="color: blue;">Dougal Davis</a>.<br><em>Available upon request.</em></li>
-  </ul>
+<p>
+    PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.
+</p>
+<p>
+    My advisor is <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a>, I am part of the  <a href="https://algebraicgeometry.science.unimelb.edu.au/#tabmain" style="color: blue;">Algebraic Geometry Group</a>.
+</p>
+<p><strong>Email:</strong> monteleonea at student dot unimelb dot edu dot au</p>
 
+<p><strong>Interests:</strong> Algebraic Geometry, Arithmetic Geometry, Representation Theory</p>
 
-  <h2>Talks:</h2>
-  <!-- (talks list unchanged) -->
-  <ul>
-    <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:  <a href="assets/Archimedean_and_Unramified_Parameters_of_L_Groups.pdf">Archimedean and Unramified L‑Group Parameters</a> – June 16, 2025</li>
-    <li><a href="https://canvas.lms.unimelb.edu.au/courses/112463/pages/path-to-infinity-student-seminar-semester-1-2025">Model Categories Student Seminar</a>: <a href="assets/Dg_Categories_and_Functoriality_of_the_Mapping_Cone.pdf">Dg Categories and Functoriality of the Mapping Cone</a> – May 27, 2025</li>
-    <li><a href="https://sites.google.com/view/oliver-li/seminars/weil-conjectures-ii?authuser=0">Weil Conjectures II Seminar</a>: Étale Picard‑Lefschetz Formula – March 27, 2025</li>
-    <li><a href="https://sites.google.com/student.unimelb.edu.au/gw-theory/home?pli=1&authuser=1">Gromov‑Witten Theory Seminar</a>:  <a href="assets/Quantum_Cohomology_and_the_Gromov_Witten_Theory_of_P2.pdf">Quantum Cohomology and the Gromov‑Witten Theory of \( \mathbb{P}^{2} \)</a> – November 26, 2024</li>
-    <li><a href="https://sites.google.com/view/dougal-davis/seminars/pure-mathematics-seminar?authuser=0">Pure Math Seminar</a>: <a href="assets/Fourier_Mukai_Transforms_and_Derived_Equivalences.pdf">Fourier‑Mukai Transforms and Derived Equivalences</a> – October 11, 2024</li>
+<p><strong>ResearchGate:</strong>
+    <a href="https://www.researchgate.net/profile/Adam_Monteleone">Adam Monteleone</a>
+</p>
+
+<h2>Publications:</h2>
+<ul>
+    <li>Local Tail Statistics of Heavy-Tailed Random Matrix Ensembles with Unitary Invariance (with Mario Kieburg) –
+        <a href="https://arxiv.org/pdf/2103.00817">arXiv</a><br>
+        <em>Journal of Physics A: Mathematical and Theoretical 54 (2021), no. 32, 324002.
+        <a href="https://iopscience.iop.org/issue/1751-8121/54/32">Journal Link</a></em>
+    </li>
+</ul>
+
+<h2>MSc Thesis:</h2>
+<ul>
+    <li><strong>Homological Projective Duality</strong>, July 2024 – supervised by
+        <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a> and
+        <a href="https://sites.google.com/view/dougal-davis/home?authuser=0" style="color: blue;">Dougal Davis</a>.
+        <br><em>Available upon request.</em>
+    </li>
+</ul>
+
+<h2>Talks:</h2>
+<ul>
+    <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:
+        <a href="assets/Archimedean_and_Unramified_Parameters_of_L_Groups.pdf">
+        Archimedean and Unramified L-Group Parameters</a> – June 16, 2025</li>
+    <li><a href="https://canvas.lms.unimelb.edu.au/courses/112463/pages/path-to-infinity-student-seminar-semester-1-2025">Model Categories Student Seminar</a>:
+        <a href="assets/Dg_Categories_and_Functoriality_of_the_Mapping_Cone.pdf">
+        Dg Categories and Functoriality of the Mapping Cone</a> – May 27, 2025</li>
+    <li><a href="https://sites.google.com/view/oliver-li/seminars/weil-conjectures-ii?authuser=0">Weil Conjectures II Seminar</a>:
+        Étale Picard-Lefschetz Formula – March 27, 2025</li>
+    <li><a href="https://sites.google.com/student.unimelb.edu.au/gw-theory/home?pli=1&authuser=1">Gromov-Witten Theory Seminar</a>:
+        <a href="assets/Quantum_Cohomology_and_the_Gromov_Witten_Theory_of_P2.pdf">
+        Quantum Cohomology and the Gromov-Witten Theory of \( \mathbb{P}^{2} \)</a> – November 26, 2024</li>
+    <li><a href="https://sites.google.com/view/dougal-davis/seminars/pure-mathematics-seminar?authuser=0">The University of Melbourne Pure Math Seminar</a>:
+        <a href="assets/Fourier_Mukai_Transforms_and_Derived_Equivalences.pdf">
+        Fourier-Mukai Transforms and Derived Equivalences</a> – October 11, 2024</li>
     <li>Étale Cohomology and the Weil Conjectures Seminar: Poincaré Duality for Étale Cohomology – October 10, 2024</li>
-    <li><a href="https://algebraicgeometry.science.unimelb.edu.au/#tab13">Derived Algebraic Geometry Seminar</a>: <a href="assets/DAG_Seminar___Derived_Algebraic_Stacks.pdf">Derived Algebraic Stacks</a> – September 17, 2024</li>
+    <li><a href="https://algebraicgeometry.science.unimelb.edu.au/#tab13">Derived Algebraic Geometry Seminar</a>:
+        <a href="assets/DAG_Seminar___Derived_Algebraic_Stacks.pdf">
+        Derived Algebraic Stacks</a> – September 17, 2024</li>
     <li>K3 Surfaces Seminar: Derived Categories of K3 Surfaces – June 19, 2024</li>
-    <li>∞‑categories Seminar: dg‑Categories and dg‑Enhanced Derived Categories – October 11, 2023</li>
-    <li>Higher Categorical Symmetries in TQFT's Seminar: Stiefel‑Whitney Classes and Obstruction Theory II – September 28, 2023</li>
-    <li>Higher Categorical Symmetries in TQFT's Seminar: Stiefel‑Whitney Classes and Obstruction Theory I – September 21, 2023</li>
-    <li><a href="https://algebraicgeometry.science.unimelb.edu.au/#tab13">Algebraic Stacks Seminar – Good Moduli Spaces</a>: Cohomological Affine Morphisms – August 23, 2023</li>
-    <li><a href="https://algebraicgeometry.science.unimelb.edu.au/#tab13">Algebraic Stacks Seminar – Good Quotients in GIT</a>: Good Quotients in GIT – August 16, 2023</li>
-    <li>Categorical Symmetries in Mathematical Physics Seminar: <a href="assets/Categorical_Symmetries_in_Mathematical_Physics__Group_Cohomology__Projective_Representations_and_Central_Extensions.pdf">Group Cohomology, Projective Representations, and Central Extensions</a> – July 22, 2022</li>
-    <li><a href="https://representationtheory.science.unimelb.edu.au/student-seminar-2020s2-and-2021s1/">Representation Theory Student Seminar</a>: Representations of the Degenerate Affine Hecke Algebra via Okounkov‑Vershik – May 5, 2021</li>
-  </ul>
+    <li>∞-categories Seminar: dg-Categories and dg-Enhanced Derived Categories – October 11, 2023</li>
+    <li>Higher Categorical Symmetries in TQFT’s Seminar: Stiefel-Whitney Classes and Obstruction Theory II – September 28, 2023</li>
+    <li>Higher Categorical Symmetries in TQFT’s Seminar: Stiefel-Whitney Classes and Obstruction Theory I – September 21, 2023</li>
+    <li><a href="https://algebraicgeometry.science.unimelb.edu.au/#tab13">Algebraic Stacks Seminar – Existence of Good Moduli (Alper-Halpern-Leistner-Heinloth)</a>:
+        Cohomological Affine Morphisms and Good Moduli Spaces – August 23, 2023</li>
+    <li><a href="https://algebraicgeometry.science.unimelb.edu.au/#tab13">Algebraic Stacks Seminar – Existence of Good Moduli (Alper-Halpern-Leistner-Heinloth)</a>:
+        Good Quotients in GIT – August 16, 2023</li>
+    <li>Categorical Symmetries in Mathematical Physics Seminar:
+        <a href="assets/Categorical_Symmetries_in_Mathematical_Physics__Group_Cohomology__Projective_Representations_and_Central_Extensions.pdf">
+        Group Cohomology, Projective Representations, and Central Extensions</a> – July 22, 2022</li>
+    <li><a href="https://representationtheory.science.unimelb.edu.au/student-seminar-2020s2-and-2021s1/">Representation Theory Student Seminar</a>:
+        Representations of the Degenerate Affine Hecke Algebra via Okounkov-Vershik – May 5, 2021</li>
+</ul>
+
 </body>
 </html>
 
