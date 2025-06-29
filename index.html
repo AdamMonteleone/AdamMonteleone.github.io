@@ -5,23 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Browser-tab / Google result title -->
+  <!-- Browser‑tab / Google result title -->
   <title>Adam Monteleone</title>
   <meta property="og:title" content="Adam Monteleone – Algebraic & Arithmetic Geometry">
-  <!-- Two-line grey snippet in Google results -->
+  <!-- Two‑line grey snippet in Google results -->
   <meta name="description"
         content="Homepage of Adam Monteleone, PhD candidate in algebraic and arithmetic geometry at the University of Melbourne. Research interests include derived categories, representation theory and number theory.">
 
   <!-- Canonical URL — leave as github.io unless/until you add a custom domain -->
   <link rel="canonical" href="https://adammonteleone.github.io/">
 
-  <!-- ———— SEARCH-ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
+  <!-- ———— SEARCH‑ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "dateCreated": "2024-12-23T00:00:00+10:00",
-  "dateModified": "2025-06-26T00:00:00+10:00",
+  "dateModified": "2025-06-29T00:00:00+10:00",
 
   "mainEntity": {
     "@type": "Person",
@@ -47,7 +47,7 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    /* 100 % of your current CSS — leave exactly as it is */
+    /* Typography & basic layout */
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -55,20 +55,34 @@
       margin: 0;
       padding: 20px;
     }
-    h1 {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    p { margin: 5px 0; }
-    a { color: #007bff; text-decoration: none; }
+    h1 { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+    p  { margin: 5px 0; }
+    a  { color: #007bff; text-decoration: none; }
     a:hover { text-decoration: underline; }
     ul { padding-left: 20px; }
     h2 { margin-top: 20px; font-size: 22px; }
+
+    /* 27‑lines GIF top‑right */
+    #cubic-gif {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 260px;          /* desktop size */
+      pointer-events: none;  /* don’t intercept clicks */
+    }
+    @media (max-width: 600px) {
+      #cubic-gif { width: 160px; top: 10px; right: 10px; }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Clebsch cubic animation (Greg Egan) -->
+  <img id="cubic-gif"
+       src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
+       alt="Animation of the 27 lines on a Clebsch cubic surface (Greg Egan)"
+       loading="lazy" />
+
 <h1>Adam Monteleone</h1>
 
 <p>
@@ -121,3 +135,4 @@
 </ul>
 </body>
 </html>
+
