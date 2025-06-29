@@ -9,43 +9,43 @@
   <title>Adam Monteleone</title>
   <meta property="og:title" content="Adam Monteleone – Algebraic & Arithmetic Geometry">
   <!-- Two‑line grey snippet in Google results -->
-  <meta name="description" content="Homepage of Adam Monteleone, PhD candidate in algebraic and arithmetic geometry at the University of Melbourne. Research interests include derived categories, representation theory and number theory.">
+  <meta name="description"
+        content="Homepage of Adam Monteleone, PhD candidate in algebraic and arithmetic geometry at the University of Melbourne. Research interests include derived categories, representation theory and number theory.">
 
   <!-- Canonical URL — leave as github.io unless/until you add a custom domain -->
-  <link rel="canonical" href="https://adammonteleone.github.io/"/>
+  <link rel="canonical" href="https://adammonteleone.github.io/">
 
   <!-- ———— SEARCH‑ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "dateCreated": "2024-12-23T00:00:00+10:00",
-  "dateModified": "2025-06-29T00:00:00+10:00",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Adam Monteleone",
-    "jobTitle": "PhD Candidate in Mathematics",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "The University of Melbourne",
-      "url": "https://unimelb.edu.au/"
-    },
-    "url": "https://adammonteleone.github.io/",
-    "sameAs": [
-      "https://www.researchgate.net/profile/Adam_Monteleone",
-      "https://arxiv.org/a/monteleone_a.html"
-    ],
-    "knowsAbout": ["Algebraic Geometry","Arithmetic Geometry","Derived Categories"]
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "dateCreated": "2024-12-23T00:00:00+10:00",
+    "dateModified": "2025-06-26T00:00:00+10:00",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Adam Monteleone",
+      "jobTitle": "PhD Candidate in Mathematics",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of Melbourne",
+        "url": "https://unimelb.edu.au/"
+      },
+      "url": "https://adammonteleone.github.io/",
+      "sameAs": [
+        "https://www.researchgate.net/profile/Adam_Monteleone",
+        "https://arxiv.org/a/monteleone_a.html"
+      ],
+      "knowsAbout": ["Algebraic Geometry","Arithmetic Geometry","Derived Categories"]
+    }
   }
-}
-</script>
+  </script>
 
   <!-- ———— KEEP YOUR EXISTING ASSETS BELOW ———— -->
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    /* RESET BASICS */
-    * { box-sizing:border-box; }
+    /* 100 % of your current CSS — plus small additions for the corner GIFs */
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -53,74 +53,61 @@
       margin: 0;
       padding: 20px;
     }
-
-    /* LAYOUT FOR HEADER WITH TWO GIFS */
-    .header-container{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;   /* CY3 ‑ text ‑ 27‑lines */
-      gap:20px;
-      margin-bottom:20px;             /* space before rest of page */
-      flex-wrap:wrap;                 /* stacks nicely on very small screens */
-    }
-    .header-gif{
-      width:180px;        /* tweak size here */
-      height:auto;
-      pointer-events:none; /* clicks pass through */
-    }
-    .header-text{ flex:1; min-width:220px; }
-
-    h1 {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 0 0 10px 0;
-    }
-
-    p { margin: 5px 0; }
-    a { color: #007bff; text-decoration: none; }
+    h1 { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+    p  { margin: 5px 0; }
+    a  { color: #007bff; text-decoration: none; }
     a:hover { text-decoration: underline; }
     ul { padding-left: 20px; }
     h2 { margin-top: 20px; font-size: 22px; }
+
+    /* ———— Corner GIFs ———— */
+    .corner-gifs {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;           /* above everything */
+      pointer-events: none;   /* allow clicks on links underneath */
+    }
+    .corner-gifs img {
+      width: 150px;           /* resize here */
+      height: auto;
+    }
+    @media (max-width: 700px) {
+      .corner-gifs img { width: 90px; }
+    }
   </style>
 </head>
 
 <body>
-  <!-- ───── HEADER WITH CY3 (LEFT) • YOUR NAME/TEXT (CENTER) • 27‑LINES (RIGHT) ───── -->
-  <div class="header-container">
-    <!-- CY3 fold animation (LEFT) -->
-    <img class="header-gif" src="{{ '/assets/CY3.gif' | relative_url }}" alt="Calabi–Yau three‑fold rotating">
-
-    <!-- Central text block -->
-    <div class="header-text">
-      <h1>Adam Monteleone</h1>
-      <p>PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.</p>
-      <p>My advisor is <a href="https://blogs.unimelb.edu.au/jack-hall/">Jack Hall</a>; I am part of the <a href="https://algebraicgeometry.science.unimelb.edu.au/#tabmain">Algebraic Geometry Group</a>.</p>
-      <p><strong>Email:</strong> monteleonea at student dot unimelb dot edu dot au</p>
-      <p><strong>Interests:</strong> Algebraic Geometry, Arithmetic Geometry, Representation Theory</p>
-      <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Adam_Monteleone">Adam Monteleone</a></p>
-    </div>
-
-    <!-- 27 lines animation (RIGHT) -->
-    <img class="header-gif" src="{{ '/assets/img/27-lines-cropped.gif' | relative_url }}" alt="27 straight lines on a cubic surface">
+  <!-- ———— TOP‑RIGHT ANIMATIONS ———— -->
+  <div class="corner-gifs">
+    <!-- Calabi–Yau 3‑fold (rename/path exactly as uploaded) -->
+    <img src="assets/CY3.gif" alt="Calabi–Yau 3‑fold animation">
+    <!-- 27 lines on a cubic surface -->
+    <img src="assets/img/27-lines-cropped.gif" alt="27 lines on cubic surface animation">
   </div>
 
-  <!-- ───── MAIN CONTENT BELOW (unchanged) ───── -->
+  <!-- ———— PAGE CONTENT ———— -->
+  <h1>Adam Monteleone</h1>
+
+  <p>PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.</p>
+  <p>My advisor is <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a>, I am part of the <a href="https://algebraicgeometry.science.unimelb.edu.au/#tabmain" style="color: blue;">Algebraic Geometry Group</a>.</p>
+  <p><strong>Email:</strong> monteleonea at student dot unimelb dot edu dot au</p>
+  <p><strong>Interests:</strong> Algebraic Geometry, Arithmetic Geometry, Representation Theory</p>
+  <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Adam_Monteleone">Adam Monteleone</a></p>
+
   <h2>Publications:</h2>
   <ul>
-    <li>Local Tail Statistics of Heavy-Tailed Random Matrix Ensembles with Unitary Invariance (with Mario Kieburg) –
-        <a href="https://arxiv.org/pdf/2103.00817">arXiv</a><br>
-        <em>Journal of Physics A: Mathematical and Theoretical 54 (2021), no. 32, 324002. <a href="https://iopscience.iop.org/issue/1751-8121/54/32">Journal Link</a></em>
-    </li>
+    <li>Local Tail Statistics of Heavy-Tailed Random Matrix Ensembles with Unitary Invariance (with Mario Kieburg) – <a href="https://arxiv.org/pdf/2103.00817">arXiv</a><br><em>Journal of Physics A: Mathematical and Theoretical 54 (2021), no. 32, 324002. <a href="https://iopscience.iop.org/issue/1751-8121/54/32">Journal Link</a></em></li>
   </ul>
 
   <h2>MSc Thesis:</h2>
   <ul>
-    <li><strong>Homological Projective Duality</strong>, July 2024 – supervised by
-        <a href="https://blogs.unimelb.edu.au/jack-hall/">Jack Hall</a> and
-        <a href="https://sites.google.com/view/dougal-davis/home?authuser=0">Dougal Davis</a>.
-        <br><em>Available upon request.</em>
-    </li>
+    <li><strong>Homological Projective Duality</strong>, July 2024 – supervised by <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a> and <a href="https://sites.google.com/view/dougal-davis/home?authuser=0" style="color: blue;">Dougal Davis</a>.<br><em>Available upon request.</em></li>
   </ul>
+
 
   <h2>Talks:</h2>
   <!-- (talks list unchanged) -->
