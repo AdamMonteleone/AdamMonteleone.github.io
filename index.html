@@ -72,8 +72,9 @@
       pointer-events: none;  /* ensures underlying links remain clickable */
     }
     .corner-box img{
-      width: 200px;   /* make both slightly larger */
+      width: 200px;   /* animations size */
       height: auto;
+      pointer-events: auto; /* re-enable pointer so clicks register on images */
     }
   </style>
 </head>
@@ -82,15 +83,15 @@
 
 <!-- ———— FIXED TOP-RIGHT ANIMATIONS ———— -->
 <div class="corner-box">
-  <!-- 27 lines on cubic surface (left) -->
-  <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
-       alt="27 lines on cubic surface animation"
-       loading="lazy">
+  <!-- 27 lines on cubic surface (left) → now clickable -->
+  <a href="http://www.neverendingbooks.org/arnolds-trinities/" target="_blank" rel="noopener">
+    <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
+         alt="27 lines on cubic surface animation">
+  </a>
 
   <!-- Calabi–Yau 3-fold (right) -->
   <img src="assets/CY3.gif"
-       alt="Calabi–Yau 3-fold animation"
-       loading="lazy">
+       alt="Calabi–Yau 3-fold animation">
 </div>
 
 <!-- ———— MAIN PAGE CONTENT ———— -->
