@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Browser-tab / Google result title -->
+  <!-- Browser‑tab / Google result title -->
   <title>Adam Monteleone</title>
-  <meta property="og:title" content="Adam Monteleone – Algebraic & Arithmetic Geometry">
+  <meta property="og:title" content="Adam Monteleone – Algebraic &amp; Arithmetic Geometry">
 
-  <!-- Two-line grey snippet in Google results -->
+  <!-- Two‑line grey snippet in Google results -->
   <meta name="description"
         content="Homepage of Adam Monteleone, PhD candidate in algebraic and arithmetic geometry at the University of Melbourne. Research interests include derived categories, representation theory and number theory.">
 
   <!-- Canonical URL — leave as github.io unless/until you add a custom domain -->
   <link rel="canonical" href="https://adammonteleone.github.io/">
 
-  <!-- ———— SEARCH-ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
+  <!-- ———— SEARCH‑ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,56 +54,50 @@
       margin: 0;
       padding: 20px;
     }
-    h1   { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
-    p    { margin: 5px 0; }
-    a    { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul   { padding-left: 20px; }
-    h2   { margin-top: 20px; font-size: 22px; }
+    h1{font-size:28px;font-weight:bold;margin-bottom:10px;}
+    p{margin:5px 0;}
+    a{color:#007bff;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    ul{padding-left:20px;}
+    h2{margin-top:20px;font-size:22px;}
 
-    /* ———— NEW FOR CORNER ANIMATIONS ———— */
+    /* ———— CORNER ANIMATIONS ———— */
     .corner-box{
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      gap: 10px;          /* spacing between the two animations */
-      z-index: 1000;
-      pointer-events: none;  /* ensures underlying links remain clickable */
+      position:fixed;
+      top:10px;
+      right:10px;
+      display:flex;
+      gap:10px;
+      z-index:1000;
+      pointer-events:none; /* disable by default */
     }
+    .corner-box a{pointer-events:auto;} /* but links stay clickable */
     .corner-box img{
-      width: 200px;   /* desktop size */
-      height: auto;
+      width:200px;
+      height:auto;
     }
 
-    /* ———— MOBILE TWEAKS (screens ≤ 600 px) ———— */
-    @media (max-width: 600px){
-      .corner-box{
-        right: 5px;   /* tuck closer to the edge */
-      }
-      .corner-box img{
-        width: 44vw;  /* each takes ~44 % of viewport width */
-        max-width: 160px; /* but never exceed this */
-      }
+    /* Phones portrait — shrink */
+    @media (max-width:600px){
+      .corner-box{right:5px;}
+      .corner-box img{width:44vw;max-width:160px;}
     }
-    /* Hide corner animations entirely on phones */
-  @media (max-width: 639px){
-    .corner-box{ display:none; }
-  }
-</style>
+    /* Completely hide on very narrow screens */
+    @media (max-width:639px){
+      .corner-box{display:none;}
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ———— FIXED TOP-RIGHT ANIMATIONS ———— -->
+<!-- ———— FIXED TOP‑RIGHT ANIMATIONS ———— -->
 <div class="corner-box">
   <!-- 27 lines on cubic surface (left) clickable link -->
   <a href="http://www.neverendingbooks.org/arnolds-trinities/" target="_blank" rel="noopener">
     <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
-         alt="27 lines on cubic surface animation"
-         loading="lazy">
-</a>
-
+         alt="27 lines on cubic surface animation" loading="lazy">
+  </a>
   <!-- Calabi–Yau 3-fold (right) -->
   <img src="assets/CY3.gif" alt="Calabi–Yau 3-fold animation" loading="lazy">
 </div>
