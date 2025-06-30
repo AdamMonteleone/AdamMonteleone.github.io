@@ -67,18 +67,17 @@
       top:10px;
       right:10px;
       display:flex;
-      gap:10px;
-      z-index:1000;
-      pointer-events:none; /* disable by default */
+      z-index:1000; /* still above content */
     }
-    .corner-box a{pointer-events:auto;} /* but links stay clickable */
+    .co */
     .corner-box img{
       width:200px;
       height:auto;
-    }
-
-    /* Phones portrait — shrink */
-    @media (max-width:600px){
+    }.corner-box img{
+      width:200px;
+      height:auto;
+      pointer-events:none; /* image itself inert so link handles click */
+    }00px){
       .corner-box{right:5px;}
       .corner-box img{width:44vw;max-width:160px;}
     }
@@ -92,18 +91,14 @@
 <body>
 
 <!-- ———— FIXED TOP‑RIGHT ANIMATIONS ———— -->
+<div class="co<!-- ———— FIXED TOP‑RIGHT ANIMATIONS ———— -->
 <div class="corner-box">
-  <!-- 27 lines on cubic surface (left) clickable link -->
+  <!-- 27 lines on cubic surface (clickable) -->
   <a href="http://www.neverendingbooks.org/arnolds-trinities/" target="_blank" rel="noopener">
     <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
          alt="27 lines on cubic surface animation" loading="lazy">
   </a>
-  <!-- Calabi–Yau 3-fold (right) -->
-  <img src="assets/CY3.gif" alt="Calabi–Yau 3-fold animation" loading="lazy">
-</div>
-
-<!-- ———— MAIN PAGE CONTENT ———— -->
-<h1>Adam Monteleone</h1>
+</div>h1>
 
 <p>
     PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.
@@ -136,6 +131,7 @@
         <br><em>Available upon request.</em>
     </li>
 </ul>
+
 <h2>Talks:</h2>
 <ul>
     <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:
