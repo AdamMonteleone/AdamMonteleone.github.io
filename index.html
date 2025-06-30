@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Browser‑tab / Google result title -->
+  <!-- Browser-tab / Google result title -->
   <title>Adam Monteleone</title>
-  <meta property="og:title" content="Adam Monteleone – Algebraic &amp; Arithmetic Geometry">
+  <meta property="og:title" content="Adam Monteleone – Algebraic & Arithmetic Geometry">
 
-  <!-- Two‑line grey snippet in Google results -->
+  <!-- Two-line grey snippet in Google results -->
   <meta name="description"
         content="Homepage of Adam Monteleone, PhD candidate in algebraic and arithmetic geometry at the University of Melbourne. Research interests include derived categories, representation theory and number theory.">
 
   <!-- Canonical URL — leave as github.io unless/until you add a custom domain -->
   <link rel="canonical" href="https://adammonteleone.github.io/">
 
-  <!-- ———— SEARCH‑ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
+  <!-- ———— SEARCH-ENGINE STRUCTURED DATA (INVISIBLE) ———— -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,51 +54,62 @@
       margin: 0;
       padding: 20px;
     }
-    h1{font-size:28px;font-weight:bold;margin-bottom:10px;}
-    p{margin:5px 0;}
-    a{color:#007bff;text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    ul{padding-left:20px;}
-    h2{margin-top:20px;font-size:22px;}
+    h1   { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+    p    { margin: 5px 0; }
+    a    { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul   { padding-left: 20px; }
+    h2   { margin-top: 20px; font-size: 22px; }
 
-    /* ———— CORNER ANIMATIONS ———— */
+    /* ———— NEW FOR CORNER ANIMATIONS ———— */
     .corner-box{
-      position:fixed;
-      top:10px;
-      right:10px;
-      display:flex;
-      z-index:1000; /* still above content */
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;          /* spacing between the two animations */
+      z-index: 1000;
+      pointer-events: none;  /* ensures underlying links remain clickable */
     }
-    .co */
     .corner-box img{
-      width:200px;
-      height:auto;
-    }.corner-box img{
-      width:200px;
-      height:auto;
-      pointer-events:none; /* image itself inert so link handles click */
-    }00px){
-      .corner-box{right:5px;}
-      .corner-box img{width:44vw;max-width:160px;}
+      width: 200px;   /* desktop size */
+      height: auto;
     }
-    /* Completely hide on very narrow screens */
-    @media (max-width:639px){
-      .corner-box{display:none;}
+
+    /* ———— MOBILE TWEAKS (screens ≤ 600 px) ———— */
+    @media (max-width: 600px){
+      .corner-box{
+        right: 5px;   /* tuck closer to the edge */
+      }
+      .corner-box img{
+        width: 44vw;  /* each takes ~44 % of viewport width */
+        max-width: 160px; /* but never exceed this */
+      }
     }
-  </style>
+    /* Hide corner animations entirely on phones */
+  @media (max-width: 639px){
+    .corner-box{ display:none; }
+  }
+</style>
 </head>
 
 <body>
 
-<!-- ———— FIXED TOP‑RIGHT ANIMATIONS ———— -->
-<div class="co<!-- ———— FIXED TOP‑RIGHT ANIMATIONS ———— -->
+<!-- ———— FIXED TOP-RIGHT ANIMATIONS ———— -->
 <div class="corner-box">
-  <!-- 27 lines on cubic surface (clickable) -->
+  <!-- 27 lines on cubic surface (left) clickable link -->
   <a href="http://www.neverendingbooks.org/arnolds-trinities/" target="_blank" rel="noopener">
     <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
-         alt="27 lines on cubic surface animation" loading="lazy">
-  </a>
-</div>h1>
+         alt="27 lines on cubic surface animation"
+         loading="lazy">
+</a>
+
+  <!-- Calabi–Yau 3-fold (right) -->
+  <img src="assets/CY3.gif" alt="Calabi–Yau 3-fold animation" loading="lazy">
+</div>
+
+<!-- ———— MAIN PAGE CONTENT ———— -->
+<h1>Adam Monteleone</h1>
 
 <p>
     PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.
@@ -131,7 +142,6 @@
         <br><em>Available upon request.</em>
     </li>
 </ul>
-
 <h2>Talks:</h2>
 <ul>
     <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:
@@ -166,6 +176,10 @@
     <li><a href="https://representationtheory.science.unimelb.edu.au/student-seminar-2020s2-and-2021s1/">Representation Theory Student Seminar</a>:
         Representations of the Degenerate Affine Hecke Algebra via Okounkov-Vershik – May 5, 2021</li>
 </ul>
+
+</body>
+</html>
+
 
 </body>
 </html>
