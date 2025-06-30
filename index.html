@@ -46,102 +46,88 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    /* ———— EXISTING STYLES ———— */
-    body {
+    /* ———— GLOBAL STYLES ———— */
+    body{
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 20px;
+      background:#f4f4f4;
+      color:#333;
+      margin:0; padding:20px;
     }
-    h1   { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
-    p    { margin: 5px 0; }
-    a    { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul   { padding-left: 20px; }
-    h2   { margin-top: 20px; font-size: 22px; }
+    h1{font-size:28px;font-weight:bold;margin-bottom:10px;}
+    p{margin:5px 0;}
+    a{color:#007bff;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    ul{padding-left:20px;}
+    h2{margin-top:20px;font-size:22px;}
 
-    /* ———— NEW FOR CORNER ANIMATIONS ———— */
+    /* ———— CORNER ANIMATION ———— */
     .corner-box{
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      gap: 10px;          /* spacing between the two animations */
-      z-index: 1000;
-      pointer-events: none;  /* ensures underlying links remain clickable */
+      position:fixed; top:10px; right:10px;
+      z-index:1000;
+      pointer-events:none;         /* ignore clicks …             */
     }
+    .corner-box a{pointer-events:auto;} /* …except on the anchor      */
     .corner-box img{
-      width: 200px;   /* desktop size */
-      height: auto;
+      width:240px; height:auto;    /* larger desktop size          */
     }
 
-    /* ———— MOBILE TWEAKS (screens ≤ 600 px) ———— */
-    @media (max-width: 600px){
-      .corner-box{
-        right: 5px;   /* tuck closer to the edge */
-      }
-      .corner-box img{
-        width: 44vw;  /* each takes ~44 % of viewport width */
-        max-width: 160px; /* but never exceed this */
-      }
+    /* ———— HIDE ON MOBILE (≤ 900 px) ———— */
+    @media(max-width:900px){
+      .corner-box{display:none;}
     }
-    /* Hide corner animations entirely on phones */
-  @media (max-width: 639px){
-    .corner-box{ display:none; }
-  }
-</style>
+  </style>
 </head>
 
 <body>
 
-<!-- ———— FIXED TOP-RIGHT ANIMATIONS ———— -->
+<!-- ———— TOP-RIGHT 27-LINES GIF (CLICKABLE) ———— -->
 <div class="corner-box">
-  <!-- 27 lines on cubic surface (left) clickable link -->
-  <a href="http://www.neverendingbooks.org/arnolds-trinities/" target="_blank" rel="noopener">
+  <a href="http://www.neverendingbooks.org/arnolds-trinities/"
+     target="_blank" rel="noopener">
     <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
-         alt="27 lines on cubic surface animation"
-         loading="lazy">
-</a>
-
-  <!-- Calabi–Yau 3-fold (right) -->
-  <img src="assets/CY3.gif" alt="Calabi–Yau 3-fold animation" loading="lazy">
+         alt="27 lines on a cubic surface animation" loading="lazy">
+  </a>
 </div>
 
 <!-- ———— MAIN PAGE CONTENT ———— -->
 <h1>Adam Monteleone</h1>
 
 <p>
-    PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.
+  PhD Candidate in the School of Mathematics and Statistics at The University of Melbourne.
 </p>
 <p>
-    My advisor is <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a>, I am part of the  <a href="https://algebraicgeometry.science.unimelb.edu.au/#tabmain" style="color: blue;">Algebraic Geometry Group</a>.
+  My advisor is <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a>,
+  I am part of the
+  <a href="https://algebraicgeometry.science.unimelb.edu.au/#tabmain" style="color: blue;">
+  Algebraic Geometry Group</a>.
 </p>
 <p><strong>Email:</strong> monteleonea at student dot unimelb dot edu dot au</p>
 
 <p><strong>Interests:</strong> Algebraic Geometry, Arithmetic Geometry, Representation Theory</p>
 
 <p><strong>ResearchGate:</strong>
-    <a href="https://www.researchgate.net/profile/Adam_Monteleone">Adam Monteleone</a>
+  <a href="https://www.researchgate.net/profile/Adam_Monteleone">Adam Monteleone</a>
 </p>
 
 <h2>Publications:</h2>
 <ul>
-    <li>Local Tail Statistics of Heavy-Tailed Random Matrix Ensembles with Unitary Invariance (with Mario Kieburg) –
-        <a href="https://arxiv.org/pdf/2103.00817">arXiv</a><br>
-        <em>Journal of Physics A: Mathematical and Theoretical 54 (2021), no. 32, 324002.
-        <a href="https://iopscience.iop.org/issue/1751-8121/54/32">Journal Link</a></em>
-    </li>
+  <li>
+    Local Tail Statistics of Heavy-Tailed Random Matrix Ensembles with Unitary Invariance (with Mario Kieburg) –
+    <a href="https://arxiv.org/pdf/2103.00817">arXiv</a><br>
+    <em>Journal of Physics A: Mathematical and Theoretical 54 (2021), no. 32, 324002.
+    <a href="https://iopscience.iop.org/issue/1751-8121/54/32">Journal Link</a></em>
+  </li>
 </ul>
 
 <h2>MSc Thesis:</h2>
 <ul>
-    <li><strong>Homological Projective Duality</strong>, July 2024 – supervised by
-        <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a> and
-        <a href="https://sites.google.com/view/dougal-davis/home?authuser=0" style="color: blue;">Dougal Davis</a>.
-        <br><em>Available upon request.</em>
-    </li>
+  <li><strong>Homological Projective Duality</strong>, July 2024 – supervised by
+      <a href="https://blogs.unimelb.edu.au/jack-hall/" style="color: blue;">Jack Hall</a> and
+      <a href="https://sites.google.com/view/dougal-davis/home?authuser=0" style="color: blue;">Dougal Davis</a>.
+      <br><em>Available upon request.</em>
+  </li>
 </ul>
+
 <h2>Talks:</h2>
 <ul>
     <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:
