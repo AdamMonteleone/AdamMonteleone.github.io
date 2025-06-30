@@ -67,14 +67,24 @@
       top: 10px;
       right: 10px;
       display: flex;
-      gap: 10px;      /* spacing between the two animations */
+      gap: 10px;          /* spacing between the two animations */
       z-index: 1000;
       pointer-events: none;  /* ensures underlying links remain clickable */
     }
     .corner-box img{
-      width: 200px;   /* animations size */
+      width: 200px;   /* desktop size */
       height: auto;
-      pointer-events: auto; /* re-enable pointer so clicks register on images */
+    }
+
+    /* ———— MOBILE TWEAKS (screens ≤ 600 px) ———— */
+    @media (max-width: 600px){
+      .corner-box{
+        right: 5px;   /* tuck closer to the edge */
+      }
+      .corner-box img{
+        width: 44vw;  /* each takes ~44 % of viewport width */
+        max-width: 160px; /* but never exceed this */
+      }
     }
   </style>
 </head>
@@ -128,7 +138,6 @@
         <br><em>Available upon request.</em>
     </li>
 </ul>
-
 <h2>Talks:</h2>
 <ul>
     <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:
