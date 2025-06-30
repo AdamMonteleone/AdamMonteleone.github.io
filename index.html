@@ -67,30 +67,45 @@
       top: 10px;
       right: 10px;
       display: flex;
-      gap: 10px;      /* spacing between the two animations */
+      gap: 10px;          /* spacing between the two animations */
       z-index: 1000;
       pointer-events: none;  /* ensures underlying links remain clickable */
     }
     .corner-box img{
-      width: 200px;   /* make both slightly larger */
+      width: 200px;   /* desktop size */
       height: auto;
     }
-  </style>
+
+    /* ———— MOBILE TWEAKS (screens ≤ 600 px) ———— */
+    @media (max-width: 600px){
+      .corner-box{
+        right: 5px;   /* tuck closer to the edge */
+      }
+      .corner-box img{
+        width: 44vw;  /* each takes ~44 % of viewport width */
+        max-width: 160px; /* but never exceed this */
+      }
+    }
+    /* Hide corner animations entirely on phones */
+  @media (max-width: 639px){
+    .corner-box{ display:none; }
+  }
+</style>
 </head>
 
 <body>
 
 <!-- ———— FIXED TOP-RIGHT ANIMATIONS ———— -->
 <div class="corner-box">
-  <!-- 27 lines on cubic surface (left) -->
-  <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
-       alt="27 lines on cubic surface animation"
-       loading="lazy">
+  <!-- 27 lines on cubic surface (left) → now clickable -->
+  <a href="http://www.neverendingbooks.org/arnolds-trinities/" target="_blank" rel="noopener">
+    <img src="https://blogs.ams.org/visualinsight/files/2018/08/clebsch_diagonal_cubic-1-1.gif"
+         alt="27 lines on cubic surface animation">
+  </a>
 
   <!-- Calabi–Yau 3-fold (right) -->
   <img src="assets/CY3.gif"
-       alt="Calabi–Yau 3-fold animation"
-       loading="lazy">
+       alt="Calabi–Yau 3-fold animation">
 </div>
 
 <!-- ———— MAIN PAGE CONTENT ———— -->
@@ -127,7 +142,6 @@
         <br><em>Available upon request.</em>
     </li>
 </ul>
-
 <h2>Talks:</h2>
 <ul>
     <li><a href="https://aghitza.github.io/seminar/nuts2025.html">Number Theory Seminar</a>:
