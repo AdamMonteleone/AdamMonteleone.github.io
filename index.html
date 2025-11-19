@@ -75,20 +75,36 @@
     @media(max-width:900px){
       .corner-box{display:none;}
     }
-        /* ———— SPEC(Z) FOOTER IMAGE ———— */
+    /* ———— SPEC(Z) + M3,0 FOOTER IMAGES ———— */
     .specz-footer{
-      margin: 40px auto 10px auto;  /* space above, centered block */
-      text-align: center;
+      margin: 40px auto 10px auto;
+      max-width: 900px;            /* overall width of the pair    */
+      display: flex;
+      justify-content: center;
+      gap: 24px;                   /* space between the two images */
     }
+
     .specz-footer img{
       display: block;
-      margin: 0 auto;
-      max-width: 550px;   /* control how large it can ever get */
-      width: 80%;         /* relative size on medium screens   */
-      height: auto;       /* keep aspect ratio                 */
+      height: 260px;               /* controls common height       */
+      width: auto;                 /* let width follow aspect      */
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      object-fit: contain;         /* don’t crop                   */
+      background: #fdfdfd;         /* neutral background           */
     }
+
+    /* On very small screens, stack them vertically */
+    @media (max-width: 600px){
+      .specz-footer{
+        flex-direction: column;
+        align-items: center;
+      }
+      .specz-footer img{
+        height: 200px;
+      }
+    }
+
   </style>
 </head>
 
@@ -201,7 +217,10 @@
 
   <div class="specz-footer">
     <img src="assets/Spec(Z)_Drawing.jpg"
-         alt="Hand-drawn picture of Spec(Z) with closed points and the generic point">
+         alt="Spec(Z) drawing">
+
+    <img src="assets/M3Strata.jpg"
+         alt="Dual graph stratification of M_{3,0}">
   </div>
 </body>
 </html>
