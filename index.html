@@ -76,23 +76,14 @@
       .corner-box{display:none;}
     }
     /* ———— SPEC(Z) + M3,0 FOOTER IMAGES ———— */
-    .specz-footer{
-      margin: 40px auto 10px auto;
-      max-width: 900px;            /* overall width of the pair    */
-      display: flex;
-      justify-content: center;
-      gap: 24px;                   /* space between the two images */
-    }
+.specz-footer img{
+  max-width: 750px;   /* bigger cap on desktops */
+  width: 90%;         /* take more of the page width */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
 
-    .specz-footer img{
-      display: block;
-      height: 260px;               /* controls common height       */
-      width: auto;                 /* let width follow aspect      */
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-      object-fit: contain;         /* don’t crop                   */
-      background: #fdfdfd;         /* neutral background           */
-    }
 
     /* On very small screens, stack them vertically */
     @media (max-width: 600px){
